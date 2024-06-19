@@ -215,12 +215,11 @@ body{
     transform: translateX(200%);
 }
 
-/* For tablets */
+/* For tablets  */
 @media screen and (max-width: 768px) {
     .container {
         width: 90%;
         min-height: 480px;
-        flex-direction: column;
         overflow: hidden;
     }
     
@@ -274,60 +273,27 @@ body{
     .container {
         width: 90%;
         min-height: 500px;
-        flex-direction: column;
         overflow: hidden;
     }
 
-    .form-container,
-    .toggle-container {
+    .form-container {
         width: 100%;
         height: auto;
-    }
-    
-    .form-container {
         padding: 20px;
     }
 
     .toggle-container {
+        display: none; /* Hide the toggle container on mobile to show both forms */
+    }
+
+    .form-container.sign-in {
+
+    }
+    .form-container.sign-up {
         width: 100%;
-    }
-
-    .toggle {
-        width: 100%;
+        opacity: 1;
+        z-index: 5;
         transform: none;
-    }
-
-    .toggle-panel {
-        width: 100%;
-        transform: none;
-    }
-
-    .container.active .toggle {
-        transform: none;
-    }
-
-    .container.active .toggle-container {
-        transform: none;
-    }
-
-    .toggle-left {
-        transform: none;
-    }
-
-    .container.active .toggle-left {
-        transform: none;
-    }
-
-    .toggle-right {
-        transform: none;
-    }
-
-    .container.active .toggle-right {
-        transform: none;
-    }
-
-    .container form {
-        padding: 20px;
     }
 
     .social-icons a {
@@ -335,5 +301,14 @@ body{
         width: 35px;
         height: 35px;
     }
-}
 
+    .container p,
+    .container span {
+        font-size: 12px;
+    }
+
+    .container button {
+        font-size: 12px;
+        padding: 8px 40px;
+    }
+}
